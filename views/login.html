@@ -1,0 +1,54 @@
+<div ng-switch on="data.isLogin">
+        <div ng-switch-when="true">
+            Welcome {{data.name}}<br>  
+            <button class="btn btn-primary" ng-click="data.isLogin='false'" >Logout</button>
+        </div>
+        <div ng-switch-when="false" >
+            <div ng-class="data.status">You have to login</div>
+            <div class="row">
+                <div class="col-sm-2">User Name :</div>
+                <div class="col-sm-2"><input type="text" ng-model="data.name" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"> Password  :</div>
+                <div class="col-sm-2"><input type="password" ng-model="data.password" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2"><button class="btn btn-primary" ng-click="data.isLogin='true'" >Login</button></div>
+            </div>
+                                
+            
+        </div>         
+    </div>
+<hr>
+
+        <table class="table table-striped">
+            <tr class="info">
+                <th ng-click="">Name </th>
+            </tr>
+            <tr ng-repeat="User in UserInfo" class="repeat-animation">
+                <td>{{UserInfo.name | uppercase}}</td>
+            </tr>
+        </table>
+
+<hr><br>
+{{testString}}
+
+<hr>
+Array Length : {{UserInfo.length}} <br>
+
+{{UserInfo}}
+
+<!--
+<table class="table table-striped">
+            <tr class="info">
+                <th>Array Data</th>
+            </tr>
+            <tr ng-repeat="uinfo in UserInfo" class="repeat-animation">
+                <td>{{uinfo}}</td>            
+            </tr>
+        </table>
+-->
+
+

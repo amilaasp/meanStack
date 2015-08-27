@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+    
+<head>
+    <title>my customer app</title>    
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/animation.css" rel="stylesheet">   
+    <base href="/">
+</head>
+
+<body ng-app="customersApp">
+    
+<div class="container">
+  <h3 class="text-center">Customer Application</h3> 
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Customers</a></li>
+         <li><a href="/order">Order</a></li>
+         <li><a href="/login">Login</a></li>
+         <li><a href="/students">All Students</a></li>
+         <li><a href="/student/Kapila">One Student Kapila</a></li>
+         <li><a href="/user">User</a></li>
+      </ul>
+    </div>
+    </nav>
+    
+    
+<!--
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#/">Customers</a></li>
+      <li role="presentation"><a href="/order">Order</a></li>
+      <li role="presentation"><a href="/login">Login</a></li>
+      <li role="presentation"><a href="/students">Student</a></li>  
+      <li role="presentation"><a href="/students/Kapila">Student/Kapila</a></li>
+              <li role="presentation"><a href="/students/Amila">Student/Amila</a></li>
+        
+    </ul>  
+-->
+    
+    <hr>
+    <div ng-view class="">.......... This is view area ........</div>
+    <hr>
+    {{fristName}}
+    
+    
+<!-- JS -->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<!--<script src="js/angular-animate.min.js"></script>    -->
+<script src="js/angular-animate.js"></script>    
+<script src="appRouters.js"></script>
+
+<script src="js/controllers/customerController.js"></script>
+<script src="js/controllers/studentController.js"></script>
+
+<script src="js/services/studentFactory.js"></script>
+<script src="js/services/addNewStudentFactory.js"></script>
+<script src="js/services/customerFactory.js"></script>
+
+<!--    User -->
+    <script src="js/services/userFactory.js"></script>
+    <script src="js/controllers/userController.js"></script>
+    
+
+<!--
+<script src="app/app.js"></script>
+<script src="app/controllers/customerController.js"></script>
+<script src="app/services/customersFactory.js"></script>
+<script src="app/services/customersFactory.js"></script>
+<script src="app/services/customersService.js"></script>
+<script src="app/services/values.js"></script>    
+<script src="route.js"></script> 
+-->
+
+
+</div>
+
+</body>
+</html>
